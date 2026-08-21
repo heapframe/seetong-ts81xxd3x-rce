@@ -36,8 +36,8 @@ command execution
 - `probe_harness.c`: probe version: also attempts command probes from inside the emulator (shows type-byte framing requirement)  
 
 If the firmware download the script below uses to create the sysroot doesent exist anymore. You can grab it from one of these (just image search the nvr, the firmware is widely distributed):
-- https://www.fullward.com/index.php?m=home&c=View&a=index&aid=145
-- http://en.tpsee.com/index.php?md=article&ct=lists&catid=24
+- https://www.fullward.com/index.php?m=home&c=View&a=index&aid=145  
+- http://en.tpsee.com/index.php?md=article&ct=lists&catid=24  
 I used firmware `v4.6.1.4-build202604241011` for this, other firmware versions have not yet been tested, but downstream dropshippers like fullward have it too.
 
 ## Building
