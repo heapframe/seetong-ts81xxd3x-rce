@@ -1,4 +1,4 @@
-# PoC - RLog debug server RCE
+# PoC - RLog debug server RCE ([CVE-2026-100886](https://vuldb.com/vuln/410835))
 The harness demonstrates that the firmware's libLOG.so starts an RLog  
 server on TCP/3000. The command-dispatcher analysis and dynamic tests  
 demonstrate unauthenticated OS command execution through that server.  
