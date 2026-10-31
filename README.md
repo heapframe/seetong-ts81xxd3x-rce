@@ -165,3 +165,12 @@ $ printf 'Cmd id > /tmp/rlog_id.txt\r\n' | nc <target> 3000      # id output cap
 Both verified on the emulated server. Commands execute via `mysystem()` → `/usr/sbin/systemd` → `/bin/sh` (root on device). No output is returned on the socket (blind RCE; use out-of-band exfiltration, e.g. `Cmd cat /usr/local/etc/user.db > /mnt/...` or a reverse shell).
 
 **Impact:** any unauthenticated network attacker can execute shell commands as root, read any file (incl. the plaintext password DB and password-leaking logs), and switch telnet to port 23. On a LAN this is game over; on internet-exposed units likewise.
+
+## Vendor fix
+
+The vendor (Shenzhen Topsee Technology Co., Ltd., "TOPSEE" / "Seetong") has released fixed firmware V4.6.2.0 (2026-10-29), available at:
+http://en.tpsee.com/index.php?md=article&ct=lists&catid=24
+
+It applies to the TS81xxD3x, TS8232C10 and TS8xxxG series, which correspond to the affected models T8108, T8108P, T8116 and T8232. Users of these devices should upgrade.
+
+Vendor advisory: http://en.tpsee.com/index.php?md=article&ct=show&catid=58&id=243
